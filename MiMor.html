@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi amorcito</title>
+</head>
+<body>
+    <style>body {
+        background: rgb(255, 173, 173);
+        font-size: 1.2em;
+        font-size: 1.2em;
+        display: grid;
+        min-height: 100vh;
+        justify-content: center;
+        align-content: center;
+
+      }
+      .heart{
+        --size: 200px;
+        --color: rgb(255, 51, 51);
+        transform:rotate(45deg);
+        animation:beat 1s infinite alternate ease-in-out;
+      }
+      @keyframes beat{
+        to{
+          transform: rotate(45deg) scale(1.05);
+        }
+      }
+      
+      .heart,
+      .heart::before,
+      .heart::after{
+          width: var(--size);
+          height: var(--size);
+          background:var(--color);
+      }
+      .heart::before,
+      .heart::after{
+        content:'';
+        display: block;
+        border-radius:50%;
+      }
+      .heart::before{
+        margin-top: calc(var(--size)*-.5);
+       
+      }
+      .heart::after{
+        margin-top: calc(var(--size)* -0.5);
+        margin-left: calc(var(--size)* -0.5);
+      }
+      #texto{margin: 50px;} #corazon{margin-left: 400px; margin-top: 50px; float: center;} #cancion{margin: 75px; float: center;}</style>
+ 
+     <div id="texto">  <center><font face="Impact" size="30" color="red">Te amo</font><br>
+        <font face="Arial" size="17" color="black">Este es un pequeno detallito que tu rollito ah preparado
+            realmente el espera que te guste por que lo hizo con musho amor, espero ir anadiendo mas contenido y mejorar este espacio
+            para nosotros (espero no se me olvide bb).
+        </font></center></div>
+        <font face="Arial" size="17" color="black" >Nuestra cancion jeje:</font>
+        <div id="cancion"><iframe width="560" height="315" src="https://www.youtube.com/embed/0FtniY4ztaY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+             clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <font face="Arial" size="17" color="black" >Corazoncito que palpita por ti:</font>
+        <br><br><br><br><br><br>
+    <div class="heart" id="corazon"></div>
+</body>
+</html>
